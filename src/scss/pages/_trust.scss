@@ -1,0 +1,44 @@
+@use '../base/variables' as *;
+
+.trust {
+    margin-top: 40px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid $color-border;
+        border-radius: 26px;
+        overflow: hidden;
+    }
+
+    &__item {
+        background: $color-white;
+        padding: 16px 25px 14px 25px;
+        text-align: center;
+        border-right: 1px solid $color-border;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__number {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0;
+        text-align: left;
+        color: $color-text;
+        margin-bottom: 1px;
+    }
+
+    &__text {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 14.5px;
+        line-height: 18px;
+        letter-spacing: 0;
+        text-align: left;
+        color: #6d858b;
+    }
+}

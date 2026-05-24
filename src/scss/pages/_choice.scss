@@ -1,0 +1,124 @@
+@use '../base/variables' as *;
+
+.choice {
+    margin-top: 75px;
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 50px;
+        color: $color-text;
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 50px;
+        color: #6d858b;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    &__card {
+        border: 0.5px solid $color-primary;
+        border-radius: 36px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            z-index: 2;
+        }
+
+        &--left::before {
+            background: $color-primary;
+        }
+
+        &--right::before {
+            background: $color-accent;
+        }
+
+        &-content {
+            padding: 39px 63px 35px 63px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+            position: relative;
+        }
+    }
+
+    &__card--left {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: #bfebe475;
+            border-radius: 50%;
+            top: -68px;
+            right: -58px;
+            z-index: -1;
+        }
+
+        .choice__card-content::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: #e1fffa;
+            border-radius: 50%;
+            bottom: -102px;
+            right: 65px;
+            z-index: -2;
+        }
+    }
+
+    &__card-title {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 34px;
+        color: $color-text;
+        line-height: 50px;
+        margin-bottom: 6px;
+    }
+
+    &__card-text {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-text-soft;
+    }
+
+    &__link {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 17px;
+        color: $color-primary;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        transition: color $transition-fast;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}

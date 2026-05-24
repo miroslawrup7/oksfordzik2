@@ -1,0 +1,16 @@
+@use '../base/variables' as *;
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+.container--wide {
+    max-width: $container-wide-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section--overflow {
+    overflow-x: clip;
+}

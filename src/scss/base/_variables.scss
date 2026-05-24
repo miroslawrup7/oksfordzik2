@@ -1,0 +1,70 @@
+// =========================================================
+// KOLORY
+// =========================================================
+
+// Kolory bazowe
+$color-white: #ffffff;
+$color-bg: #fbfdfc;
+
+// Tekst
+$color-text: #12343b;
+$color-text-soft: #2a4b52;
+$color-muted: #6e858b;
+
+// Kolory marki
+$color-primary: #1fa6a8;
+$color-primary-dark: #0f7779;
+$color-accent: #f66a5b;
+
+// Jasne tła
+$color-cream: #eafffc;
+$color-mint: #eaf7f5;
+
+// Linie i obramowania
+$color-border: #d9eae8;
+
+// Gradienty
+$gradient-topbar-start: #10343a;
+$gradient-topbar-end: #2c8fa0;
+
+// =========================================================
+// TYPOGRAFIA
+// =========================================================
+
+$font-primary: 'Poppins', sans-serif;
+$font-heading: 'Poppins', sans-serif;
+
+// =========================================================
+// WYMIARY
+// =========================================================
+
+$container-width: 1300px;
+$container-wide-width: 1600px;
+
+// Odstępy
+$header-height: 101px;
+$top-bar-height: 50px;
+
+// Zaokrąglenia
+$radius-sm: 16px;
+$radius-md: 26px;
+$radius-lg: 42px;
+$hero-card-radius: 36px;
+
+// Cienie
+$shadow-soft: 0 18px 45px rgba(18, 52, 59, 0.1);
+
+// =========================================================
+// BREAKPOINTY
+// =========================================================
+
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 640px;
+$breakpoint-desktop-small: 1200px;
+
+// =========================================================
+// PRZEJŚCIA
+// =========================================================
+
+$transition: 0.2s ease;
+$transition-fast: 0.18s ease;

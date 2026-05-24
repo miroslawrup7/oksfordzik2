@@ -1,0 +1,12 @@
+@use '../base/variables' as *;
+
+.footer {
+    background: $color-text;
+    color: $color-white;
+    padding: 40px 0;
+    margin-top: 60px;
+
+    &__inner {
+        text-align: center;
+    }
+}

@@ -1,0 +1,43 @@
+@use '../base/variables' as *;
+@use 'sass:color';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 24px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &--primary {
+        background: $color-accent;
+        color: $color-white;
+        border-color: $color-accent;
+
+        &:hover {
+            background: $color-white;
+            color: $color-accent;
+            border-color: $color-accent;
+            transform: translateY(-2px);
+        }
+    }
+
+    &--secondary {
+        background: $color-white;
+        color: $color-primary-dark;
+        border-color: $color-primary;
+
+        &:hover {
+            background: $color-primary;
+            color: $color-white;
+            border-color: $color-primary;
+            transform: translateY(-2px);
+        }
+    }
+}

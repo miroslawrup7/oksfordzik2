@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+
+.top-bar {
+    width: 100%;
+    background: linear-gradient(90deg, $gradient-topbar-start, $gradient-topbar-end);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $top-bar-height;
+    color: $color-white;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+    }
+
+    &__text {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    &__phone-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: inherit;
+        text-decoration: none;
+        position: absolute;
+        right: 54px;
+    }
+
+    &__phone-label {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: right;
+    }
+
+    &__phone-number {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: right;
+    }
+}

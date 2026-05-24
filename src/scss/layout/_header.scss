@@ -1,0 +1,74 @@
+@use '../base/variables' as *;
+@use 'sass:color';
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    padding-top: 28px;
+    background: $color-white;
+    z-index: 100;
+}
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $header-height;
+        padding: 0 18px 0 8px;
+    }
+
+    &__logo {
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+
+    &__logo-img {
+        width: 77px;
+        height: auto;
+        display: block;
+    }
+
+    &__logo-text {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 26px;
+        letter-spacing: -0.02em;
+        color: $color-text;
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0;
+            text-align: center;
+            color: $color-text-soft;
+            text-decoration: none;
+            transition: color $transition;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__cta {
+        .btn--primary {
+        }
+    }
+}
