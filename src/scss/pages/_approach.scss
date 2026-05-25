@@ -1,0 +1,108 @@
+@use '../base/variables' as *;
+@use 'sass:color';
+
+.approach {
+    margin-top: 89px;
+
+    &__header {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 52px;
+        color: $color-text;
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 28px;
+        margin: 0 0 40px 0;
+        flex-wrap: wrap;
+    }
+
+    &__tab {
+        height: 42px;
+        padding: 0 24px;
+        background: $color-primary;
+        border: 2px solid transparent;
+        border-radius: 20px;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        color: $color-white;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+            background: color.adjust($color-primary, $lightness: -10%);
+        }
+
+        &--active {
+            background: $color-white;
+            border: 2px solid $color-text;
+            color: $color-primary;
+
+            &:hover {
+                background: $color-white;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        background: $color-white;
+        border-radius: 36px;
+        min-height: 488px;
+    }
+
+    &__slide {
+        display: none;
+        grid-template-columns: 1fr 650px;
+        gap: 0;
+        min-height: 488px;
+
+        &--active {
+            display: grid;
+        }
+    }
+
+    &__text {
+        padding: 78px 54px;
+    }
+
+    &__slide-title {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 22px;
+        color: $color-text;
+        margin-bottom: 24px;
+    }
+
+    &__slide-text {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 18px;
+        color: $color-text;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    &__image {
+        width: 650px;
+        height: 488px;
+        border-radius: 36px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}

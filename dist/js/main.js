@@ -23,7 +23,27 @@ var initWhyTabs = () => {
     });
   });
 };
+var initApproachTabs = () => {
+  const tabs = document.querySelectorAll(".approach__tab");
+  const slides = document.querySelectorAll(".approach__slide");
+  if (!tabs.length) return;
+  const switchTab = (tabId) => {
+    tabs.forEach((tab) => tab.classList.remove("approach__tab--active"));
+    const activeTab = document.querySelector(`.approach__tab[data-tab="${tabId}"]`);
+    if (activeTab) activeTab.classList.add("approach__tab--active");
+    slides.forEach((slide) => slide.classList.remove("approach__slide--active"));
+    const activeSlide = document.querySelector(`.approach__slide[data-slide="${tabId}"]`);
+    if (activeSlide) activeSlide.classList.add("approach__slide--active");
+  };
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const tabId = tab.getAttribute("data-tab");
+      if (tabId) switchTab(tabId);
+    });
+  });
+};
 document.addEventListener("DOMContentLoaded", () => {
   initWhyTabs();
+  initApproachTabs();
 });
 //# sourceMappingURL=main.js.map
