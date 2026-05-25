@@ -685,4 +685,122 @@ body {
      object-fit: cover;
   display: block;
 }
+
+.video {
+  margin-top: 122px;
+}
+.video__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.video__content {
+  flex: 1;
+  padding-right: 20px;
+}
+.video__label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #f66a5b;
+  margin-bottom: 9px;
+}
+.video__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+  color: #12343b;
+  margin-bottom: 10px;
+}
+.video__description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #6d858b;
+  margin-bottom: 38px;
+  max-width: 500px;
+}
+.video__thumbnail {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  border-radius: 36px;
+  border: 1px solid #ffffff;
+  opacity: 0.9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.video__thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  display: block;
+}
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  padding: 0;
+  overflow: visible;
+}
+.video__play svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video__play svg:first-child {
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video__play .video__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(4px, 1px);
+  width: 27px;
+  height: 39px;
+}
+.video__play:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.video__play:hover svg:first-child circle {
+  fill: rgb(243.3468208092, 62.0751445087, 42.6531791908);
+}
+
+.btn--video {
+  background: #f66a5b;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  padding: 0 24px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.btn--video:hover {
+  background: rgb(243.3468208092, 62.0751445087, 42.6531791908);
+  transform: translateY(-2px);
+}
 /*# sourceMappingURL=main.css.map */
